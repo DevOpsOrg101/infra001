@@ -18,15 +18,10 @@ provider "azurerm" {
   subscription_id = "4556d065-e801-43d2-bae9-68a06a4a8886"
 }
 
-resource "azurerm_resource_group" "rg1" {
-  name     = "rg-manosij2"
+resource "azurerm_resource_group" "rg3" {
+  name     = "rg-demo123"
   location = "West Europe"
 }
-
-# resource "azurerm_resource_group" "rg3" {
-#   name     = "rg-demo123"
-#   location = "West Europe"
-# }
 
 # resource "azurerm_resource_group" "rg4" {
 #   name     = "rg-demo1234"
