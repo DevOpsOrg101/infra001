@@ -23,10 +23,10 @@ resource "azurerm_resource_group" "rg3" {
   location = "West Europe"
 }
 
-# resource "azurerm_resource_group" "rg4" {
-#   name     = "rg-demo1234"
-#   location = "West Europe"
-# }
+resource "azurerm_resource_group" "rg4" {
+  name     = "rg-demo1234"
+  location = "West Europe"
+}
 
 resource "azurerm_resource_group" "rg5" {
   name     = "rg-demo12345"
