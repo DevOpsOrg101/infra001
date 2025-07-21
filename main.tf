@@ -1,10 +1,4 @@
 terraform {
- # backend "azurerm" {
- #   resource_group_name  = "rg-manosij"
- #   storage_account_name = "manosijstg1"
- #   container_name       = "manosij-container1"
- #   key                  = "manosij.tfstate" # State file name
- # }
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
@@ -23,36 +17,4 @@ resource "azurerm_resource_group" "rg3" {
   location = "West Europe"
 }
 
-# resource "azurerm_resource_group" "rg4" {
-#   name     = "rg-demo1234"
-#   location = "West Europe"
-# }
 
-resource "azurerm_resource_group" "rg5" {
-  name     = "rg-demo12345"
-  location = "West Europe"
-}
-
-resource "azurerm_storage_account" "stg" {
-  name                     = "storageaccountmanosij"
-  resource_group_name      = azurerm_resource_group.rg5.name
-  location                 = "West Europe"
-  account_tier             = "Standard"
-  account_replication_type = "GRS"
-
-}
-
-
-resource "azurerm_resource_group" "rg6" {
-  name     = "rg-demo123456"
-  location = "West Europe"
-}
-
-resource "azurerm_storage_account" "stg1" {
-  name                     = "storageaccountmanosij1"
-  resource_group_name      = "rg-demo123456"
-  location                 = "West Europe"
-  account_tier             = "Standard"
-  account_replication_type = "GRS"
-  depends_on               = [azurerm_resource_group.rg6]
-}
