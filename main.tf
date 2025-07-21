@@ -1,10 +1,10 @@
 terraform {
-  backend "azurerm" {
-    resource_group_name  = "rg-manosij"
-    storage_account_name = "manosijstg1"
-    container_name       = "manosij-container1"
-    key                  = "manosij.tfstate" # State file name
-  }
+ # backend "azurerm" {
+ #   resource_group_name  = "rg-manosij"
+ #   storage_account_name = "manosijstg1"
+ #   container_name       = "manosij-container1"
+ #   key                  = "manosij.tfstate" # State file name
+ # }
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
